@@ -1,0 +1,7 @@
+<%@songs.each do |song|%>
+  <%genres = song.genres.map{|genre| genre.name}%>
+  <h3> <a href=<%="/songs/#{song.slug}"%> > <%=song.name%> </a> </h3>
+  <p> <%=song.artist.name %> </p>
+  <p> <%=genres.join(' ') %> </p>
+
+<%end%>
